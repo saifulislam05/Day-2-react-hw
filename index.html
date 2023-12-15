@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Day 2 class work</title>
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+			
+			const firstHeadingElement = React.createElement('h1', null, 'Topics Covered')
+
+			const secondHeadingElement = React.createElement(
+				'h4',
+				null,
+				'The following is a list of all topics we cover in the MDN learning area.'
+			)
+
+			const firstDivElement = React.createElement(
+				'div',
+				null,
+				React.createElement('a', { href: '#' }, 'Getting started with the web'),
+				React.createElement(
+					'p',
+					null,
+					'Provides a practical introduction to web development for complete beginners.'
+				)
+			)
+
+			const secondDivElement = React.createElement(
+				'div',
+				null,
+				React.createElement('a', { href: '#' }, 'HTML - Structuring the web'),
+				React.createElement(
+					'p',
+					null,
+					'HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.'
+				)
+			)
+
+			const thirdDivElement = React.createElement(
+				'div',
+				null,
+				React.createElement('a', { href: '#' }, 'CSS - Styling the web'),
+				React.createElement(
+					'p',
+					null,
+					"CSS is the language that we use to control our web content's style and layout, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS."
+				)
+			)
+
+			const rootElement = React.createElement(
+				'div',
+				{ className: 'container' },
+				firstHeadingElement,
+				secondHeadingElement,
+				firstDivElement,
+				secondDivElement,
+				thirdDivElement
+			)
+
+			ReactDOM.render(rootElement, document.getElementById('root'))
+		</script>
+</body>
+
+</html>
